@@ -171,8 +171,9 @@ The code that you see is the default code that got initially loaded when you cre
 
 When you first enter the web editor the page you see should look like this:
 
+![Web editor](./images/OrionLandingPage.png)
 
-On the left navigation menu right-click on the `servers` folder and choose `New -> File`.  Name the file `customer.js`.
+On the left navigation menu right-click on the `server` folder and choose `New -> File`.  Name the file `customer.js`.
 
 Copy and paste the code below into the file.
 
@@ -202,7 +203,7 @@ exports.getCustomers = function(req, res) {
 }
 ```
 
-Right click the `routers` directory and create a new file named `myservice.js`.  Copy and paste the following code into the file.
+Right click the `routers` directory under the `server` directory and create a new file named `myservice.js`.  Copy and paste the following code into the file.
 
 ```
 var customer = require('../customer');
@@ -214,9 +215,9 @@ module.exports = function(app){
 }
 ```
 
-Click on the file named `server.js` in the `servers` directory.  Copy and paste the line of code below on line 24 after this line of code:
+Click on the file named `server.js` in the `server` directory.  Copy and paste the line of code below on line 24 after this line of code:
 
-`// add your code here`
+`23 // add your code here`
 
 ```
 // Add your code here
@@ -275,7 +276,7 @@ So far there is one function in your microservice that returns a list of custome
 
 Click on the hamburger menu and click on `DevOps`.  Click on your toolchain, then click on the Orion Web IDE tile.
 
-You should now be back in the web editor.  Right click on the `servers` directory and create a new file named `plan.js`.
+You should now be back in the web editor.  Right click on the `server` directory and create a new file named `plan.js`.
 
 Copy and paste the code below into the file.
 
