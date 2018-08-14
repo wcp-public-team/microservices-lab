@@ -617,7 +617,7 @@ Now that you have added these operations to the API Explorer consumers of your m
 
 ## Summary
 
-Congratulations, you've built your first microservice in IBM Cloud!  
+Congratulations, you've built a microservice application in IBM Cloud!  
 
 In the short time you've been working on this lab you've done a lot:
 
