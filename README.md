@@ -1,18 +1,18 @@
-# Building your first microservice in IBM Cloud
+# Build your first microservice in IBM Cloud
 
 In this lab you will create an account on IBM Cloud and provision your first microservice!   You will then add some code to the initial application to start building out your service.  You will use browser-based tools that are part of your application toolchain.  This toolchain is provided via the [Continuous Delivery](https://console.bluemix.net/catalog/services/continuous-delivery) service in IBM Cloud. 
 
 Let's get started!
 
-*__Note:__ Github will open all links in this lab in the current browser window.  If you're using a mac you can `CMD-Click` the link to open it in a new tab or browser.  If you're using Windows `CTRL-Click` the link.*
+*__Note:__ Github will open all links in this lab in the current browser window.  If you're using a mac you can `CMD-Click` the link to open it in a new tab or browser.  If you're using Windows `CTRL-Click` the link.  If you would like to share this lab with others you can share this url:  http://ibm.biz/wcp_ms_lab*
 
 ## Sign up for IBM Cloud
 
-If you have already signed up you can login here:  [https://console.bluemix.net](https://console.bluemix.net)
+To sign up for IBM Cloud go to [https://ibm.biz/cloud_wcp](https://ibm.biz/cloud_wcp) and click the `Sign up` button at the top right.  
 
-If you haven't signed up yet go to [https://ibm.biz/cloud_wcp](https://ibm.biz/cloud_wcp) and click the `Sign up` button at the top right.
+*__Note:__ If you already have an IBM Cloud account you can click the `log in` link on the sign up page to login, then proceed to the next section, `Exploring IBM Cloud`.*
 
-Fill in the required fields and click the `Create account` button at the bottom.  You will need to provide a password that conforms to the password format policy before you can click the button.
+To create your account fill in the required fields and click the `Create account` button at the bottom.  You will need to provide a password that conforms to the password format policy before you can click the button.
 
 ![Create Account](./images/CreateIBMCloudAcct.png)
 
@@ -29,6 +29,8 @@ Click the `Confirm Account` button.  You should see this in your browser:
 ![Account Confirmed](./images/AccountConfirmed.png)
 
 Now you have an IBM Cloud Account!!  Click the `Log in` button to login and check it out!  Review the account privacy policies and click the `Proceed` button if you agree.
+
+## Exploring IBM Cloud
 
 After you login you will see the `Dashboard` page.  This page can also be accessed at anytime from anywhere in IBM Cloud by clicking on the `IBM Cloud` button on the menubar:
 
@@ -625,5 +627,18 @@ In the short time you've been working on this lab you've done a lot:
 * updated the swagger definition so that your new API operations can be tested using the API Explorer
 
 __Whew, you did a lot!  Thanks for attending today!__
+<br><br><br>
 
-
+## Additional Learning Resources
+- IBM Cloud: https://www.ibm.com/cloud
+- IBM Cloud Garage Method: https://www.ibm.com/cloud/garage
+- Microservices architecture: https://www.ibm.com/cloud/garage/architectures/microservices/reference-architecture/
+- 12 Factor App: https://12factor.net
+- IBM Code: https://developer.ibm.com/code
+- IBM Coder: https://developer.ibm.com/code/community
+- IBM Code Patterns: https://developer.ibm.com/code/patterns
+- DeveloperWorks TV: https://developer.ibm.com/tv
+- Microservices TV: https://developer.ibm.com/tv/category/microservices
+- IBM Code Dojo: https://developer.ibm.com/tv/ibm-code-dojo
+- DeveloperWorks Courses: https://developer.ibm.com/courses  *Get your badges here!
+- IBM Cloud Blog: [Microservices and cloud-native development versus traditional development](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/2017/09/microservices-and-cloud-native-development-vs-traditional-development/)
