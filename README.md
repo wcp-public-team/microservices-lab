@@ -1,10 +1,10 @@
-# Building your first microservice in IBM Cloud
+# Build your first microservice in IBM Cloud
 
 In this lab you will create an account on IBM Cloud and provision your first microservice!   You will then add some code to the initial application to start building out your service.  You will use browser-based tools that are part of your application toolchain.  This toolchain is provided via the [Continuous Delivery](https://console.bluemix.net/catalog/services/continuous-delivery) service in IBM Cloud. 
 
 Let's get started!
 
-*__Note:__ Github will open all links in this lab in the current browser window.  If you're using a mac you can `CMD-Click` the link to open it in a new tab or browser.  If you're using Windows `CTRL-Click` the link.*
+*__Note:__ Github will open all links in this lab in the current browser window.  If you're using a mac you can `CMD-Click` the link to open it in a new tab or browser.  If you're using Windows `CTRL-Click` the link.  If you would like to share this lab with others you can share this url:  http://ibm.biz/wcp_ms_lab*
 
 ## Sign up for IBM Cloud
 
@@ -627,5 +627,18 @@ In the short time you've been working on this lab you've done a lot:
 * updated the swagger definition so that your new API operations can be tested using the API Explorer
 
 __Whew, you did a lot!  Thanks for attending today!__
+<br><br><br>
 
-
+## Additional Learning Resources
+- IBM Cloud: https://www.ibm.com/cloud
+- IBM Cloud Garage Method: https://www.ibm.com/cloud/garage
+- Microservices architecture: https://www.ibm.com/cloud/garage/architectures/microservices/reference-architecture/
+- 12 Factor App: https://12factor.net
+- IBM Code: https://developer.ibm.com/code
+- IBM Coder: https://developer.ibm.com/code/community
+- IBM Code Patterns: https://developer.ibm.com/code/patterns
+- DeveloperWorks TV: https://developer.ibm.com/tv
+- Microservices TV: https://developer.ibm.com/tv/category/microservices
+- IBM Code Dojo: https://developer.ibm.com/tv/ibm-code-dojo
+- DeveloperWorks Courses: https://developer.ibm.com/courses  *Get your badges here!
+- IBM Cloud Blog: [Microservices and cloud-native development versus traditional development](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/2017/09/microservices-and-cloud-native-development-vs-traditional-development/)
