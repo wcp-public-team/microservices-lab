@@ -54,7 +54,9 @@ In the middle of the dashboard page there is a section called `Create enterprise
 
 ![View App Service starter kits](./images/AppServiceStarterKitsButton.png)
 
-These are the starter kits that are available today.  Scroll down through the list and click on feel free to click on them to learn more.  If you need to get back to this page you can click on the `Starter Kits` link in the left navigation menu.
+*__Note:__ If you are using an existing IBM Cloud Lite account and you have created any resources you will not see the screen above.  If this happens to you, click on the ![hamburger](./images/HamburgerButton.png) icon at the top left, scroll down and click on `Web Apps`.  Then click `Starter Kits` on the left navigation menu.*
+
+These are the starter kits that are available today.  Scroll down through the list and click on feel free to click on them to learn more about their contents.  If you need to get back to this page you can click on the `Starter Kits` link in the left navigation menu.
 
 Scroll down and find the starter kit named Express.js Microservice.
 
@@ -82,17 +84,17 @@ Next you will see a list of available services in the `Data` category.
 
 ![Resources in Data catagory](./images/DataCloudant.png)
 
-Click on `Cloudant` and click Next.  You will be prompted to select the region in which you want to create the resource.  
+Click on `Cloudant` and click `Next`.  You will be prompted to select the region in which you want to create the resource.  
 
 ![Select a region](./images/CloudantRegion.png)
-
-Make sure you select `US South` as the region and click Next.  You will see messages that your service is being created and will be taken back to your application details page.  You can see that now the service is bound to your application and you will see the service credentials for it.
+<br><br><br>
+Make sure you select `US South` as the region and click `Create`.  You will see messages that your service is being created and will be taken back to your application details page.  You can see that now the service is bound to your application and you will see the service credentials for it.
 
 ![App details with resource](./images/AppDetailsWithResource.png)
-
+<br><br><br>
 Now you are ready to deploy your app!
 
-Click on the `Deploy to Cloud` button in the `Deploy your App` tile on the right.
+Click on the `Deploy to Cloud` button in the `Deploy your App` tile.
 
 ![Deploy your application](./images/DeployAppCloudFoundry.png)
 
@@ -103,12 +105,12 @@ Click `Create`.
 You will see some messages that resources are being allocated and that your toolchain was created successfully.  The App Details page should show that your toolchain is configured.
 
 ![Application Deployed](./images/AppDeployedCloudFoundry.png)
-
-Click on the `View Toolchain` button.
-
+<br><br><br>
+Click on the `View Toolchain` button.  A toolchain is a set of tool integrations that support development, deployment, and operations tasks. 
+<br><br><br>
 ![Application toolchain](./images/Toolchain.png)
 
-The Continuous Delivery service in IBM Cloud provides a collection of developer tools that can be linked together into toolchains.  THe toolchain in the screen shot above is a typical starter toolchain that contains tools for you to store your code, track issues, deploy your application and to edit your code right in the browser.  
+The Continuous Delivery service in IBM Cloud provides a collection of developer tools that can be linked together into toolchains.  The toolchain in the screen shot above is a typical starter toolchain that contains tools for you to store your code, track issues, deploy your application and to edit your code right in the browser.  
 
 Click on the `Git` tile.
 
@@ -118,21 +120,9 @@ Click on the `Git` tile.
 
 IBM Cloud provides a built-in instance of Git that you can use to manage your code.  To keep things simple the starter kit uses this internal repository to manage your code, but toolchains support integrations to Github, GitLab, Bitbucket, Rational Team Concert and other tools as well.
 
------------ Start of temp section - to be removed before lab or updated
-We will be cloning this repo later in the lab so we must first set up an access token.  On the top right of the menu bar, click the icon for your user and click `Settings`.
-
-image here
-
-Click the Access Tokens link on the left navigation menu.
-
-image here.
-
-
----------- End of temp section
-
 Click the `Back` button on your browser to return to the toolchain.
 
-Click on the `Deliver` tile in the toolchain to see the delivery pipeline for your application.
+Click on the `Delivery Pipeline` tile in the toolchain to see the delivery pipeline for your application.  Your delivery pipeline should look similar to the one in the screen shot below.
 
 ![Delivery pipeline](./images/DeliveryPipeline.png)
 
@@ -173,9 +163,11 @@ When you first enter the web editor the page you see should look like this:
 
 ![Web editor](./images/OrionLandingPage.png)
 
-On the left navigation menu right-click on the `server` folder and choose `New -> File`.  Name the file `customer.js`.
+On the left navigation menu right-click on the `server` folder and choose `New -> File`.  Name the file `customer.js`.  This file will contain logic that will return a list of three customers.  In a real application this function would retrieve the customers from a database, such as the Cloudant database you added to your application when you created it.  For the purposes of this lab you will just return a hard-coded list of customers.
 
 Copy and paste the code below into the file.
+
+*__Note:__ The Orion Web IDE will automatically save your changes for you.  If for some reason it hasn't saved them and you try to open a differnt file it will warn you that you have unsaved changes.  If this happens you can use the File -> Save menu to manually save your changes.*
 
 ```
 exports.getCustomers = function(req, res) {
@@ -203,7 +195,9 @@ exports.getCustomers = function(req, res) {
 }
 ```
 
-Right click the `routers` directory under the `server` directory and create a new file named `myservice.js`.  Copy and paste the following code into the file.
+Right click the `routers` directory under the `server` directory and create a new file named `myservice.js`.  The code below creates a `route` for your api and links it to the function you created in `customer.js`.  The new route will be `http://<your-app-name>.mybluemix.net/customers`.
+
+Copy and paste the following code into the file.
 
 ```
 var customer = require('../customer');
@@ -217,7 +211,7 @@ module.exports = function(app){
 
 Click on the file named `server.js` in the `server` directory.  Copy and paste the line of code below on line 24 after this line of code:
 
-`23 // add your code here`
+`23  // add your code here`
 
 ```
 // Add your code here
