@@ -8,11 +8,11 @@ Let's get started!
 
 ## Sign up for IBM Cloud
 
-If you have already signed up you can login here:  [https://console.bluemix.net](https://console.bluemix.net)
+To sign up for IBM Cloud go to [https://ibm.biz/cloud_wcp](https://ibm.biz/cloud_wcp) and click the `Sign up` button at the top right.  
 
-If you haven't signed up yet go to [https://ibm.biz/cloud_wcp](https://ibm.biz/cloud_wcp) and click the `Sign up` button at the top right.
+*__Note:__ If you already have an IBM Cloud account you can click the `log in` link on the sign up page to login, then proceed to the next section, `Exploring IBM Cloud`.*
 
-Fill in the required fields and click the `Create account` button at the bottom.  You will need to provide a password that conforms to the password format policy before you can click the button.
+To create your account fill in the required fields and click the `Create account` button at the bottom.  You will need to provide a password that conforms to the password format policy before you can click the button.
 
 ![Create Account](./images/CreateIBMCloudAcct.png)
 
@@ -29,6 +29,8 @@ Click the `Confirm Account` button.  You should see this in your browser:
 ![Account Confirmed](./images/AccountConfirmed.png)
 
 Now you have an IBM Cloud Account!!  Click the `Log in` button to login and check it out!  Review the account privacy policies and click the `Proceed` button if you agree.
+
+## Exploring IBM Cloud
 
 After you login you will see the `Dashboard` page.  This page can also be accessed at anytime from anywhere in IBM Cloud by clicking on the `IBM Cloud` button on the menubar:
 
