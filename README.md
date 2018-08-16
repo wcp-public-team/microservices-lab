@@ -1,5 +1,8 @@
 # Build your first microservice in IBM Cloud
 
+You can find the presentation used during the meetup [here](./presentation/MicroservicesMeetup-V1.pdf).
+
+## Lab Overview
 In this lab you will create an account on IBM Cloud and provision your first microservice!   You will then add some code to the initial application to start building out your service.  You will use browser-based tools that are part of your application toolchain.  This toolchain is provided via the [Continuous Delivery](https://console.bluemix.net/catalog/services/continuous-delivery) service in IBM Cloud. 
 
 Let's get started!
@@ -642,3 +645,4 @@ __Whew, you did a lot!  Thanks for attending today!__
 - IBM Code Dojo: https://developer.ibm.com/tv/ibm-code-dojo
 - DeveloperWorks Courses: https://developer.ibm.com/courses  *Get your badges here!
 - IBM Cloud Blog: [Microservices and cloud-native development versus traditional development](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/2017/09/microservices-and-cloud-native-development-vs-traditional-development/)
+- Other interesting stuff: https://ibm.biz/cloud4developers
