@@ -2,8 +2,6 @@
 
 You can find the presentation used during the meetup [here](./presentation/MicroservicesMeetup-V1.pdf).
 
-Christina test.
-
 ## Lab Overview
 In this lab you will create an account on IBM Cloud and provision your first microservice!   You will then add some code to the initial application to start building out your service.  You will use browser-based tools that are part of your application toolchain.  This toolchain is provided via the [Continuous Delivery](https://console.bluemix.net/catalog/services/continuous-delivery) service in IBM Cloud.
 
