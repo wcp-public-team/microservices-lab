@@ -2,8 +2,10 @@
 
 You can find the presentation used during the meetup [here](./presentation/MicroservicesMeetup-V1.pdf).
 
+Christina test.
+
 ## Lab Overview
-In this lab you will create an account on IBM Cloud and provision your first microservice!   You will then add some code to the initial application to start building out your service.  You will use browser-based tools that are part of your application toolchain.  This toolchain is provided via the [Continuous Delivery](https://console.bluemix.net/catalog/services/continuous-delivery) service in IBM Cloud. 
+In this lab you will create an account on IBM Cloud and provision your first microservice!   You will then add some code to the initial application to start building out your service.  You will use browser-based tools that are part of your application toolchain.  This toolchain is provided via the [Continuous Delivery](https://console.bluemix.net/catalog/services/continuous-delivery) service in IBM Cloud.
 
 Let's get started!
 
@@ -111,7 +113,7 @@ You will see some messages that resources are being allocated and that your tool
 
 ![Application Deployed](./images/AppDeployedCloudFoundry.png)
 <br><br><br>
-Click on the `View Toolchain` button.  A toolchain is a set of tool integrations that support development, deployment, and operations tasks. 
+Click on the `View Toolchain` button.  A toolchain is a set of tool integrations that support development, deployment, and operations tasks.
 <br><br><br>
 ![Application toolchain](./images/Toolchain.png)
 
@@ -155,7 +157,7 @@ Click the hamburger menu, then click on `DevOps` on the navigation menu that pop
 
 ![Devops](./images/HamburgerDevOps.png)
 
-This is where you will find all of your application toolchains.  Click on the name of your toolchain to view it. 
+This is where you will find all of your application toolchains.  Click on the name of your toolchain to view it.
 
 Click on the `Eclipse Orion Web IDE` tile.
 
@@ -486,7 +488,7 @@ paths:
   /health:
     get:
       operationId: get
-      description: Get health status of ExpressjsMicroserviceCNSOK 
+      description: Get health status of ExpressjsMicroserviceCNSOK
       responses:
         200:
           description: "Health check response"
