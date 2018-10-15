@@ -1,0 +1,13 @@
+- [IBM Cloud](https://www.ibm.com/cloud)
+- [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage)
+- [Microservices architecture](https://www.ibm.com/cloud/garage/architectures/microservices/reference-architecture/)
+- [12 Factor App](https://12factor.net)
+- [IBM Code](https://developer.ibm.com/code)
+- [IBM Coder](https://developer.ibm.com/code/community)
+- [IBM Code Patterns](https://developer.ibm.com/code/patterns)
+- [DeveloperWorks TV](https://developer.ibm.com/tv)
+- [Microservices TV](https://developer.ibm.com/tv/category/microservices)
+- [IBM Code Dojo](https://developer.ibm.com/tv/ibm-code-dojo)
+- [DeveloperWorks Courses](https://developer.ibm.com/courses)      __<---- *Get your badges here!__
+- IBM Cloud Blog: [Microservices and cloud-native development versus traditional development](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/2017/09/microservices-and-cloud-native-development-vs-traditional-development/)
+- Other interesting stuff: [ibm.biz/cloud4developers](https://ibm.biz/cloud4developers)

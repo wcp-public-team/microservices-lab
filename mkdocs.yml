@@ -1,0 +1,14 @@
+site_name: Microservices Lab
+nav:
+  - Home: index.md
+  - Sign up for IBM Cloud: signup.md
+  - Explore IBM Cloud: explore.md
+  - Create your first application: createapp.md
+  - Add logic to your application: addfunction1.md
+  - Add another function: addfunction2.md
+  - Using the API Explorer: apiexplorer.md
+  - Summary: summary.md
+  - Additional Learning Resources: resources.md
+theme: readthedocs
+markdown_extensions:
+  - admonition
