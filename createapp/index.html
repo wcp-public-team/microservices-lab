@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Create your first application - Microservices Lab</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Create your first application";
+    var mkdocs_page_input_path = "createapp.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Microservices Lab</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../signup/">Sign up for IBM Cloud</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../explore/">Explore IBM Cloud</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Create your first application</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#create-your-first-application">Create your first application</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../addfunction1/">Add logic to your application</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../addfunction2/">Add another function</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../apiexplorer/">Using the API Explorer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../summary/">Summary</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../resources/">Additional Learning Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Microservices Lab</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Create your first application</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="create-your-first-application">Create your first application</h1>
+<p>The IBM Cloud Platform includes a collection of <code>Starter Kits</code> to help you get started with your first application.  We will use one of these starter kits to create and deploy our microservice.</p>
+<p>In the middle of the dashboard page there is a section called <code>Create enterprise-level web apps</code>.  Click on the <code>View App Service starter kits</code> button.</p>
+<p><img alt="View App Service starter kits" src="../images/AppServiceStarterKitsButton.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>If you are using an existing IBM Cloud Lite account and you have created any resources you will not see the screen above.  If this happens to you, click on the <img alt="hamburger" src="../images/HamburgerButton.png" /> icon at the top left, scroll down and click on <code>Web Apps</code>.  Then click <code>Starter Kits</code> on the left navigation menu.</em></p>
+</div>
+<p>These are the starter kits that are available today.  Scroll down through the list and click on feel free to click on them to learn more about their contents.  If you need to get back to this page you can click on the <code>Starter Kits</code> link in the left navigation menu.</p>
+<p>Scroll down and find the starter kit named Express.js Microservice.</p>
+<p><img alt="Express.js Microservice" src="../images/ExpressMicroservice.png" /></p>
+<p>Click on the tile.  This page describes the contents of the starter kit.</p>
+<p>Click on the <code>Create App</code> button to create the application.  You will need to provide details for your application.  The Details panel contains default information for your app name and host; you can keep them or you can change them if you wish.  If you change either value remember that the hostname must be unique and needs to be a valid hostname, as the host name and domain are what make up your application's URL.</p>
+<p><img alt="App Details" src="../images/AppDetails.png" /></p>
+<p>When you are happy with the details click the <code>Create</code> button at the top right.  You should see a page similar to the one below.  You have just created your app!!</p>
+<p><img alt="App created" src="../images/AppCreated.png" /></p>
+<p>Right now it's just a definition; we haven't deployed it anywhere yet.  Also, you can see that it doesn't have any of the resources from the catalog added to it yet.  Before we deploy the app let's add one.</p>
+<p>Click on the <code>Add Resource</code> button.  You will see a dialog with a list of the categories of resources to choose from.  Click on <code>Data</code> then click <code>Next</code>.</p>
+<p><img alt="Add Data resource" src="../images/ResourcesData.png" /></p>
+<p>Next you will see a list of available services in the <code>Data</code> category.  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>This list may be different from the list of services in the <code>Data</code> category in the catalog.  Not all services in the catalog are available for use with an IBM Lite Account.</em></p>
+</div>
+<p><img alt="Resources in Data catagory" src="../images/DataCloudant.png" /></p>
+<p>Click on <code>Cloudant</code> and click <code>Next</code>.  You will be prompted to select the region in which you want to create the resource.  </p>
+<p><img alt="Select a region" src="../images/CloudantRegion.png" />
+<br><br><br>
+Make sure you select <code>US South</code> as the region and click <code>Create</code>.  You will see messages that your service is being created and will be taken back to your application details page.  You can see that now the service is bound to your application and you will see the service credentials for it.</p>
+<p><img alt="App details with resource" src="../images/AppDetailsWithResource.png" />
+<br><br><br>
+Now you are ready to deploy your app!</p>
+<p>Click on the <code>Deploy to Cloud</code> button in the <code>Deploy your App</code> tile.</p>
+<p><img alt="Deploy your application" src="../images/DeployAppCloudFoundry.png" /></p>
+<p>In the dialog that pops up Click the <code>Cloud Foundry App</code> tile.  Cloud Foundry organizes resources into <code>Spaces</code>; notice that the <code>space</code> dropdown has the value of <code>dev</code> already selected.  This space was created for you automatically when you created your account.  Your organization got created automatically as well, and your email address was used to name your organization.  You can change this later if you wish.</p>
+<p>Click <code>Create</code>.</p>
+<p>You will see some messages that resources are being allocated and that your toolchain was created successfully.  The App Details page should show that your toolchain is configured.</p>
+<p><img alt="Application Deployed" src="../images/AppDeployedCloudFoundry.png" />
+<br><br><br>
+Click on the <code>View Toolchain</code> button.  A toolchain is a set of tool integrations that support development, deployment, and operations tasks.
+<br><br><br>
+<img alt="Application toolchain" src="../images/Toolchain.png" /></p>
+<p>The Continuous Delivery service in IBM Cloud provides a collection of developer tools that can be linked together into toolchains.  The toolchain in the screen shot above is a typical starter toolchain that contains tools for you to store your code, track issues, deploy your application and to edit your code right in the browser.  </p>
+<p>Click on the <code>Git</code> tile.</p>
+<p><img alt="Code repository" src="../images/CodeGithub.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>You may see some orange banners at the top when you first open your repo.  These are normal, and are warning you that you need to create a Personal Access Token if you want to clone the repo locally to your machine.  We will not be doing that in the lab so you can close those alerts.  Dang, yes we do need to do this, as Orion also requires it</em></p>
+</div>
+<p>IBM Cloud provides a built-in instance of Git that you can use to manage your code.  To keep things simple the starter kit uses this internal repository to manage your code, but toolchains support integrations to Github, GitLab, Bitbucket, Rational Team Concert and other tools as well.</p>
+<p>Click the <code>Back</code> button on your browser to return to the toolchain.</p>
+<p>Click on the <code>Delivery Pipeline</code> tile in the toolchain to see the delivery pipeline for your application.  Your delivery pipeline should look similar to the one in the screen shot below.</p>
+<p><img alt="Delivery pipeline" src="../images/DeliveryPipeline.png" /></p>
+<p>You can see that the delivery pipeline consists of a Build stage and a Deploy stage.  The build stage for a node.js application that essentially runs the <code>npm build</code> command and packages up the directory into a zip file that gets stored internally and passed to the Deploy stage.  The Deploy stage uses the Cloud Foundry CLI to push your application to IBM Cloud.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>You might see that the Deploy stage is still running.  This is okay, just wait for it to finish before proceeding.  If the Deploy stage shows as <code>Failed</code> just click the Play button to run it again.</em></p>
+</div>
+<p>When the Deploy stage shows that it has passed and your application has a little green dot next to it go ahead and click the URL for your application.</p>
+<p>OOPS!  You got a Not Found error, right?  Not to worry, this was expected.  It occurred because we haven't actually add any of our own logic to the app yet, and the code doesn't currently handle the default route.  However, the initial code does include a couple of routes that are used by IBM Cloud to monitor the health of your application.  </p>
+<p>In your browser add <code>/health</code> to the end of your app URL and hit enter.  You should see some JSON in the browser:</p>
+<p><code>{"status":"UP"}</code></p>
+<p>That means your application is up and running!</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../addfunction1/" class="btn btn-neutral float-right" title="Add logic to your application">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../explore/" class="btn btn-neutral" title="Explore IBM Cloud"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../explore/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../addfunction1/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

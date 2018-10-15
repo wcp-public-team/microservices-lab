@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Add logic to your application - Microservices Lab</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Add logic to your application";
+    var mkdocs_page_input_path = "addfunction1.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Microservices Lab</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../signup/">Sign up for IBM Cloud</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../explore/">Explore IBM Cloud</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../createapp/">Create your first application</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Add logic to your application</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#add-logic-to-your-application">Add logic to your application</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../addfunction2/">Add another function</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../apiexplorer/">Using the API Explorer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../summary/">Summary</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../resources/">Additional Learning Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Microservices Lab</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Add logic to your application</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="add-logic-to-your-application">Add logic to your application</h1>
+<p>At this point in the lab you have created your IBM Cloud account, created your first application and deployed it.  You have seen the toolchain that was created for your application and verified that it is up and running.  Now it is time to add the logic for your microservice.  In this section you will create a new function to return a list of customers.</p>
+<p>Click the hamburger menu, then click on <code>DevOps</code> on the navigation menu that pops up.</p>
+<p><img alt="hamburger menu" src="../images/HamburgerMenuButton.png" /></p>
+<p><img alt="Devops" src="../images/HamburgerDevOps.png" /></p>
+<p>This is where you will find all of your application toolchains.  Click on the name of your toolchain to view it.</p>
+<p>Click on the <code>Eclipse Orion Web IDE</code> tile.</p>
+<p>This is a full feature editing environment that runs in your browser.  When it first loads it clones the git repo much like you would if you were editing code locally.  Starting now you will be working on a "local" copy of your repo, although you don't have to worry about having any git-related tools on your laptop.</p>
+<p>The code that you see is the default code that got initially loaded when you created the application.  It is a fully functional application that you can extend with your own code.  For the purposes of this lab you are not expected to know anything about node.js or the code in this application.  The code you need to add and instructions for where to add it will be provided in the lab instructions.</p>
+<p>When you first enter the web editor the page you see should look like this:</p>
+<p><img alt="Web editor" src="../images/OrionLandingPage.png" /></p>
+<p>On the left navigation menu right-click on the <code>server</code> folder and choose <code>New -&gt; File</code>.  Name the file <code>customer.js</code>.  This file will contain logic that will return a list of three customers.  In a real application this function would retrieve the customers from a database, such as the Cloudant database you added to your application when you created it.  For the purposes of this lab you will just return a hard-coded list of customers.</p>
+<p>Copy and paste the code below into the file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>The Orion Web IDE will automatically save your changes for you.  If for some reason it hasn't saved them and you try to open a differnt file it will warn you that you have unsaved changes.  If this happens you can use the File -&gt; Save menu to manually save your changes.</em></p>
+</div>
+<pre><code>exports.getCustomers = function(req, res) {
+
+    var customers = [
+        {
+            id: &quot;12345&quot;,
+            name: &quot;Dave Wakeman&quot;,
+            plan: &quot;Gold&quot;
+        },
+        {
+            id: &quot;12367&quot;,
+            name: &quot;Eddie Wilson&quot;,
+            plan: &quot;Platinum&quot;
+        },
+        {
+            id: &quot;12389&quot;,
+            name: &quot;Anna McFaul&quot;,
+            plan: &quot;Silver&quot;
+        }
+    ]
+
+    res.json(customers);
+
+}
+</code></pre>
+
+<p>Right click the <code>routers</code> directory under the <code>server</code> directory and create a new file named <code>myservice.js</code>.  The code below creates a <code>route</code> for your api and links it to the function you created in <code>customer.js</code>.  The new route will be <code>http://&lt;your-app-name&gt;.mybluemix.net/customers</code>.</p>
+<p>Copy and paste the following code into the file.</p>
+<pre><code>var customer = require('../customer');
+
+module.exports = function(app){
+
+    app.get(&quot;/customers&quot;, customer.getCustomers);
+
+}
+</code></pre>
+
+<p>Click on the file named <code>server.js</code> in the <code>server</code> directory.  Copy and paste the line of code below on line 24 after this line of code:</p>
+<p><code>23  // add your code here</code></p>
+<pre><code>// Add your code here
+require('./routers/myservice')(app);
+</code></pre>
+
+<p>Now you have added some code into your microservice and are ready to deploy it.  Remember that you've been working with a local clone of your git repo, so you first need to commit the code in the local git repo.</p>
+<p>Click on the icon that looks like a road sign in the left navigation bar:</p>
+<p><img alt="Link to Git page in Orion left nav" src="../images/OrionLeftNavGit.png" /></p>
+<p>You can see some files selected in the <code>Working Directory Changes</code> pane.  These are the files that you updated.  To commit these changes in the local repo add a comment into the text area and click the blue <code>Commmit</code> button.</p>
+<p><img alt="Git page in web editor" src="../images/OrionCommitChanges.png" /></p>
+<p>Once you have committed these changes you will see that there are some changes listed in the Outgoing section.  This is because you have committed these changes to the local repo and they are ready to be "pushed" to the remote repo, which is the repo in IBM Cloud.  </p>
+<p>Click the <code>Push</code> button to push your changes.</p>
+<p><img alt="Push changes" src="../images/OrionPushChanges.png" /></p>
+<p>When the push is complete you will see that there are no more outgoing changes, and you should see a new line in the history that shows your commit being pushed.</p>
+<p><img alt="after push" src="../images/OrionAfterPush.png" /></p>
+<p>So now what?  If you remember when the toolchain for your application was built it included a build stage.  That build stage is triggered to fire whenever changes get committed to the git repo in IBM Cloud.  That happened when you pushed your changes in the previous step, so your toolchain's build stage just fired!</p>
+<p>CLick on the back arrow icon on the left navigation toolbar to go back to your toolchain.</p>
+<p><img alt="Back to toolchain" src="../images/OrionLeftNavBack.png" /></p>
+<p>Click on the Delivery Pipeline tile.</p>
+<p>You should see that your Build stage has run again and your Deploy stage is probably still running.</p>
+<p><img alt="Delivery Pipeline" src="../images/AfterPushDeliveryPipeline.png" /></p>
+<p>When it finishes your changes are deployed!</p>
+<p><img alt="Deploy stage finished" src="../images/AfterPushDeployStageFinished.png" /></p>
+<p>Click on the URL for your app in the Last Execution Result box of the Deploy Stage.  We still don't have a default route defined so the browser will show <code>Not found</code>.  This is still okay.  The URL for our new route is:</p>
+<p><code>http://&lt;your-app-route&gt;.mybluemix.net/customers</code></p>
+<p>Therefore you need to add <code>/customers</code> to the end of your URL and hit enter.</p>
+<p><img alt="" src="../images/GetCustomersResult.png" /></p>
+<p>You just executed the new code and returned a list of customers!  Your microservice now has a function that returns a list of customers.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../addfunction2/" class="btn btn-neutral float-right" title="Add another function">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../createapp/" class="btn btn-neutral" title="Create your first application"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../createapp/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../addfunction2/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

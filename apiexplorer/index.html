@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Using the API Explorer - Microservices Lab</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Using the API Explorer";
+    var mkdocs_page_input_path = "apiexplorer.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Microservices Lab</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../signup/">Sign up for IBM Cloud</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../explore/">Explore IBM Cloud</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../createapp/">Create your first application</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../addfunction1/">Add logic to your application</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../addfunction2/">Add another function</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Using the API Explorer</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#using-the-api-explorer">Using the API Explorer</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../summary/">Summary</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../resources/">Additional Learning Resources</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Microservices Lab</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Using the API Explorer</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="using-the-api-explorer">Using the API Explorer</h1>
+<p>Your microservice is essentially a REST API that has two functions defined so far:</p>
+<pre><code>GET /customers
+GET /plans
+</code></pre>
+
+<p>Most REST APIs have an OpenAPI (a.k.a. Swagger) definition and an API Explorer that consumers of the API can use to test their applications.  Well, the initial code that was used to populate your git repo also has a definition file and the API explorer code built into it!</p>
+<p>To test it out, go back to your browser where you tested your code in the last section and change the end of the URL from <code>/plans</code> to <code>/explorer</code>.  It may take a few seconds to load, and when it does you should see something like this:</p>
+<p><img alt="API Explorer" src="../images/SwaggerUIDefault.png" /></p>
+<p>But where are the two API operations we added in the last two sections?  The reason they are not there yet is because we didn't update the file the contains the API definition.  That's the goal of this section of the lab.</p>
+<p>Go back to your toolchain and open the <code>Eclipse Orion Web IDE</code>.</p>
+<p>Expand the <code>public</code> folder and click on <code>swagger.yaml</code>.  This is the file that drives the Swagger UI code behind the API Explorer.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>The content of the <code>swagger.yaml</code> file is sensitive to indents.  It is very important to make sure your cursor is on column 1 of the line where you want to paste code, and also very important to make sure that when you select the code from this document you start with column 1 of the first line you select.  It is a common mistake to accidentally start selecting text in column 2, especially when that column contains a space!</em></p>
+</div>
+<p>Copy the code below and paste it right above line 26 that has <code>definitions:</code></p>
+<pre><code>  /customers:
+    get:
+      operationId: getCustomers
+      responses:
+        200:
+          description: &quot;Get all of the customers&quot;
+          schema:
+            $ref: &quot;#/definitions/CustomersResponse&quot;
+  /customers/{customerId}:
+    get:
+      description: &quot;Returns a single customer&quot;
+      operationId: &quot;getByCustomerId&quot;
+      parameters:
+      - name: &quot;customerId&quot;
+        in: &quot;path&quot;
+        description: &quot;ID of the customer to return&quot;
+        required: true
+        type: &quot;string&quot;
+      responses:
+        200:
+          description: &quot;successful operation&quot;
+          schema:
+            $ref: &quot;#/definitions/Customer&quot;
+        400:
+          description: &quot;Invalid ID supplied&quot;
+        404:
+          description: &quot;Customer not found&quot;
+  /plans:
+    get:
+      operationId: getPlans
+      responses:
+        200:
+          description: &quot;Get all of the plans&quot;
+          schema:
+            $ref: &quot;#/definitions/PlansResponse&quot;
+  /plans/{planId}:
+    get:
+      description: &quot;Returns a single plan&quot;
+      operationId: &quot;getByPlanId&quot;
+      parameters:
+      - name: &quot;planId&quot;
+        in: &quot;path&quot;
+        description: &quot;ID of the plan to return&quot;
+        required: true
+        type: &quot;string&quot;
+      responses:
+        200:
+          description: &quot;successful operation&quot;
+          schema:
+            $ref: &quot;#/definitions/Plan&quot;
+        400:
+          description: &quot;Invalid ID supplied&quot;
+        404:
+          description: &quot;Plan not found&quot;
+</code></pre>
+
+<p>Those lines add entries for the new routes we added, <code>/customers</code> and <code>/plans</code>.  They also include entries for two other paths that would commonly be part of any API.  We won't implement them in this lab.</p>
+<p>Next, copy the code below and paste it at the bottom of the file, at the end of the definitions section.  You may need to add a blank line at the end of the file.  Make sure your cursor is on the first column of the last line of the file.  You may need to backspace to get to column 1.  </p>
+<pre><code>  Customer:
+    type: &quot;object&quot;
+    properties:
+      id:
+        type: &quot;string&quot;
+      name:
+        type: &quot;string&quot;
+      plan:
+        type: &quot;string&quot;
+  Plan:
+    type: &quot;object&quot;
+    properties:
+      id:
+        type: &quot;string&quot;
+      name:
+        type: &quot;string&quot;
+      description:
+        type: &quot;string&quot;
+      premium:
+        type: &quot;number&quot;      
+  CustomersResponse:
+    type: &quot;object&quot;
+    properties:
+      customers:
+        type: &quot;array&quot;
+        items:
+          $ref: &quot;#/definitions/Customer&quot;
+  PlansResponse:
+    type: &quot;object&quot;
+    properties:
+      plans:
+        type: &quot;array&quot;
+        items:
+          $ref: &quot;#/definitions/Plan&quot;
+</code></pre>
+
+<p>Okay, the <code>swagger.yaml</code> file has everything you need to add your new operations to the API Explorer.  The final version of the file should look like this:</p>
+<pre><code>swagger: '2.0'
+
+info:
+  version: &quot;0.0.1&quot;
+  title: ExpressjsMicroserviceCNSOK API
+
+consumes:
+  - text/plain
+
+produces:
+  - application/json
+
+paths:
+  /health:
+    get:
+      operationId: get
+      description: Get health status of ExpressjsMicroserviceCNSOK
+      responses:
+        200:
+          description: &quot;Health check response&quot;
+          schema:
+            $ref: &quot;#/definitions/healthResponse&quot;
+          examples:
+            application/json: { &quot;status&quot;: &quot;UP&quot;}
+  /customers:
+    get:
+      operationId: getCustomers
+      responses:
+        200:
+          description: &quot;Get all of the customers&quot;
+          schema:
+            $ref: &quot;#/definitions/CustomersResponse&quot;
+  /customers/{customerId}:
+    get:
+      description: &quot;Returns a single customer&quot;
+      operationId: &quot;getByCustomerId&quot;
+      parameters:
+      - name: &quot;customerId&quot;
+        in: &quot;path&quot;
+        description: &quot;ID of the customer to return&quot;
+        required: true
+        type: &quot;string&quot;
+      responses:
+        200:
+          description: &quot;successful operation&quot;
+          schema:
+            $ref: &quot;#/definitions/Customer&quot;
+        400:
+          description: &quot;Invalid ID supplied&quot;
+        404:
+          description: &quot;Customer not found&quot;
+  /plans:
+    get:
+      operationId: getPlans
+      responses:
+        200:
+          description: &quot;Get all of the plans&quot;
+          schema:
+            $ref: &quot;#/definitions/PlansResponse&quot;
+  /plans/{planId}:
+    get:
+      description: &quot;Returns a single plan&quot;
+      operationId: &quot;getByPlanId&quot;
+      parameters:
+      - name: &quot;planId&quot;
+        in: &quot;path&quot;
+        description: &quot;ID of the plan to return&quot;
+        required: true
+        type: &quot;string&quot;
+      responses:
+        200:
+          description: &quot;successful operation&quot;
+          schema:
+            $ref: &quot;#/definitions/Plan&quot;
+        400:
+          description: &quot;Invalid ID supplied&quot;
+        404:
+          description: &quot;Plan not found&quot;
+
+definitions:
+  healthResponse:
+    type: &quot;object&quot;
+    properties:
+      status:
+        type: &quot;string&quot;
+  Customer:
+    type: &quot;object&quot;
+    properties:
+      id:
+        type: &quot;string&quot;
+      name:
+        type: &quot;string&quot;
+      plan:
+        type: &quot;string&quot;
+  Plan:
+    type: &quot;object&quot;
+    properties:
+      id:
+        type: &quot;string&quot;
+      name:
+        type: &quot;string&quot;
+      description:
+        type: &quot;string&quot;
+      premium:
+        type: &quot;number&quot;      
+  CustomersResponse:
+    type: &quot;object&quot;
+    properties:
+      customers:
+        type: &quot;array&quot;
+        items:
+          $ref: &quot;#/definitions/Customer&quot;
+  PlansResponse:
+    type: &quot;object&quot;
+    properties:
+      plans:
+        type: &quot;array&quot;
+        items:
+          $ref: &quot;#/definitions/Plan&quot;
+</code></pre>
+
+<p>Commit and push your code.</p>
+<p>Go back to the toolchain and view the Deploy stage of the Delivery Pipeline.  When the Deploy stage passes you can go back to the browser tab that has the Swagger UI in it and refresh the page.  If you closed that tab the URL is:</p>
+<p><code>http://&lt;your-app-route&gt;.mybluemix.net/explorer</code></p>
+<p>The API explorer should now show your new operations:</p>
+<p><img alt="API Explorer" src="../images/SwaggerUIUpdated.png" /></p>
+<p>Click the blue <code>GET</code> button next to <code>/customers</code>.</p>
+<p>Click <code>Try it out</code>.  You should get back some JSON:</p>
+<p><img alt="" src="../images/GetCustomersExplorer.png" /></p>
+<p>Scroll down further and click the blue <code>GET</code> button next to <code>/plans</code>.  Click <code>Try it out</code>.</p>
+<p><img alt="" src="../images/GetPlansExplorer.png" /></p>
+<p>Now that you have added these operations to the API Explorer consumers of your microservice can use the API explorer to test it out as they use it in their own applications!</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../summary/" class="btn btn-neutral float-right" title="Summary">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../addfunction2/" class="btn btn-neutral" title="Add another function"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../addfunction2/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../summary/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
