@@ -9,6 +9,6 @@ nav:
   - Using the API Explorer: apiexplorer.md
   - Summary: summary.md
   - Additional Learning Resources: resources.md
-theme: readthedocs
+theme: material
 markdown_extensions:
   - admonition
